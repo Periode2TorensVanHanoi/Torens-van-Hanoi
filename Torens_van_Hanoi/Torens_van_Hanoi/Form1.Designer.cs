@@ -31,11 +31,13 @@
             this.tipsButton = new System.Windows.Forms.Button();
             this.rulesButton = new System.Windows.Forms.Button();
             this.grindGroupBox = new System.Windows.Forms.GroupBox();
+            this.amountOfGrindsLabel = new System.Windows.Forms.Label();
+            this.plusGrindButton = new System.Windows.Forms.Button();
+            this.minusGrindButton = new System.Windows.Forms.Button();
+            this.playsButton = new System.Windows.Forms.Button();
             this.grindTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.resultLabel = new System.Windows.Forms.Label();
             this.grindGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,74 +60,98 @@
             this.rulesButton.TabIndex = 1;
             this.rulesButton.Text = "Rules";
             this.rulesButton.UseVisualStyleBackColor = true;
+            this.rulesButton.Click += new System.EventHandler(this.rulesButton_Click);
             // 
             // grindGroupBox
             // 
-            this.grindGroupBox.Controls.Add(this.button2);
-            this.grindGroupBox.Controls.Add(this.button1);
-            this.grindGroupBox.Controls.Add(this.label1);
             this.grindGroupBox.Controls.Add(this.grindTextBox);
+            this.grindGroupBox.Controls.Add(this.minusGrindButton);
+            this.grindGroupBox.Controls.Add(this.plusGrindButton);
+            this.grindGroupBox.Controls.Add(this.amountOfGrindsLabel);
             this.grindGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grindGroupBox.Location = new System.Drawing.Point(12, 163);
+            this.grindGroupBox.Location = new System.Drawing.Point(12, 181);
             this.grindGroupBox.Name = "grindGroupBox";
-            this.grindGroupBox.Size = new System.Drawing.Size(198, 275);
+            this.grindGroupBox.Size = new System.Drawing.Size(196, 257);
             this.grindGroupBox.TabIndex = 2;
             this.grindGroupBox.TabStop = false;
             this.grindGroupBox.Text = "schijven";
             // 
+            // amountOfGrindsLabel
+            // 
+            this.amountOfGrindsLabel.AutoSize = true;
+            this.amountOfGrindsLabel.Location = new System.Drawing.Point(70, 143);
+            this.amountOfGrindsLabel.Name = "amountOfGrindsLabel";
+            this.amountOfGrindsLabel.Size = new System.Drawing.Size(122, 20);
+            this.amountOfGrindsLabel.TabIndex = 3;
+            this.amountOfGrindsLabel.Text = "Aantal schijven";
+            // 
+            // plusGrindButton
+            // 
+            this.plusGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusGrindButton.Location = new System.Drawing.Point(6, 26);
+            this.plusGrindButton.Name = "plusGrindButton";
+            this.plusGrindButton.Size = new System.Drawing.Size(52, 50);
+            this.plusGrindButton.TabIndex = 3;
+            this.plusGrindButton.Text = "+1";
+            this.plusGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // minusGrindButton
+            // 
+            this.minusGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusGrindButton.Location = new System.Drawing.Point(6, 113);
+            this.minusGrindButton.Name = "minusGrindButton";
+            this.minusGrindButton.Size = new System.Drawing.Size(52, 50);
+            this.minusGrindButton.TabIndex = 4;
+            this.minusGrindButton.Text = "-1";
+            this.minusGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // playsButton
+            // 
+            this.playsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playsButton.Location = new System.Drawing.Point(654, 387);
+            this.playsButton.Name = "playsButton";
+            this.playsButton.Size = new System.Drawing.Size(134, 51);
+            this.playsButton.TabIndex = 3;
+            this.playsButton.Text = "aantal zetten";
+            this.playsButton.UseVisualStyleBackColor = true;
+            this.playsButton.Click += new System.EventHandler(this.playsButton_Click);
+            // 
             // grindTextBox
             // 
-            this.grindTextBox.Location = new System.Drawing.Point(79, 53);
-            this.grindTextBox.Multiline = true;
+            this.grindTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grindTextBox.Location = new System.Drawing.Point(86, 64);
             this.grindTextBox.Name = "grindTextBox";
-            this.grindTextBox.Size = new System.Drawing.Size(88, 75);
-            this.grindTextBox.TabIndex = 3;
+            this.grindTextBox.Size = new System.Drawing.Size(61, 61);
+            this.grindTextBox.TabIndex = 5;
             // 
-            // label1
+            // timeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Aantal schijven";
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Location = new System.Drawing.Point(41, 132);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(133, 36);
+            this.timeLabel.TabIndex = 4;
+            this.timeLabel.Text = "00:00:00";
             // 
-            // button1
+            // resultLabel
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 50);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "+1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 50);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "-1";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(654, 387);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 51);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "aantal zetten";
-            this.button3.UseVisualStyleBackColor = true;
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel.Location = new System.Drawing.Point(359, 377);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(93, 32);
+            this.resultLabel.TabIndex = 5;
+            this.resultLabel.Text = "label1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.resultLabel);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.playsButton);
             this.Controls.Add(this.grindGroupBox);
             this.Controls.Add(this.rulesButton);
             this.Controls.Add(this.tipsButton);
@@ -135,6 +161,7 @@
             this.grindGroupBox.ResumeLayout(false);
             this.grindGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,11 +170,13 @@
         private System.Windows.Forms.Button tipsButton;
         private System.Windows.Forms.Button rulesButton;
         private System.Windows.Forms.GroupBox grindGroupBox;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button minusGrindButton;
+        private System.Windows.Forms.Button plusGrindButton;
+        private System.Windows.Forms.Label amountOfGrindsLabel;
+        private System.Windows.Forms.Button playsButton;
         private System.Windows.Forms.TextBox grindTextBox;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label resultLabel;
     }
 }
 

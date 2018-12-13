@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4DFD6405-5ECF-460F-8FAF-4D9BCD8579CE}</ProjectGuid>
+    <ProjectGuid>{E2B17354-7C73-4A27-B2F0-EA67DB5C78DD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Torens_van_Hanoi</RootNamespace>
-    <AssemblyName>Torens_van_Hanoi</AssemblyName>
+    <RootNamespace>RulesForm</RootNamespace>
+    <AssemblyName>RulesForm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
