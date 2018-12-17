@@ -17,6 +17,7 @@ namespace Torens_van_Hanoi
             InitializeComponent();
         }
 
+        private int a = 0;
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -34,12 +35,58 @@ namespace Torens_van_Hanoi
 
         private void playsButton_Click(object sender, EventArgs e)
         {
-            double number = Int32.Parse(grindTextBox.Text);
+            int powerInt = int.Parse(grindTextBox.Text);
+            int numberInt = 2;
+            int resultInt = 1;
+
+            for (int i = 0; i < powerInt;i++)
             {
-                number = Math.Pow(2, number) -1;
+                resultInt *= numberInt;
             }
 
-            resultLabel.Text = Int32.TryParse(number);
+            resultInt--;
+
+            resultLabel.Text = resultInt.ToString();
+
+        }
+
+        private void plusGrindButton_Click(object sender, EventArgs e)
+        {
+            a++;
+            grindTextBox.Text = a.ToString();
+        }
+
+        private void minusGrindButton_Click(object sender, EventArgs e)
+        {
+            a--;
+            grindTextBox.Text = a.ToString();
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double number;
+            long result = 0;
+            number = double.Parse(grindPowerTextBox.Text);
+
+
+            result = (long)Math.Pow(2, number) - 1;
+
+
+            powerLabel.Text = result.ToString();
+        }
+
+        private void plusPowerGrindButton_Click(object sender, EventArgs e)
+        {
+            a++;
+            grindPowerTextBox.Text = a.ToString();
+        }
+
+        private void minusPowerGrindButton_Click(object sender, EventArgs e)
+        {
+            a--;
+            grindPowerTextBox.Text = a.ToString();
         }
     }
 
