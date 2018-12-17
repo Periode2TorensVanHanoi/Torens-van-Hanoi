@@ -31,14 +31,24 @@
             this.tipsButton = new System.Windows.Forms.Button();
             this.rulesButton = new System.Windows.Forms.Button();
             this.grindGroupBox = new System.Windows.Forms.GroupBox();
-            this.amountOfGrindsLabel = new System.Windows.Forms.Label();
-            this.plusGrindButton = new System.Windows.Forms.Button();
-            this.minusGrindButton = new System.Windows.Forms.Button();
-            this.playsButton = new System.Windows.Forms.Button();
             this.grindTextBox = new System.Windows.Forms.TextBox();
+            this.minusGrindButton = new System.Windows.Forms.Button();
+            this.plusGrindButton = new System.Windows.Forms.Button();
+            this.amountOfGrindsLabel = new System.Windows.Forms.Label();
+            this.playsButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.resultLabel = new System.Windows.Forms.Label();
+            this.powerGroupBox = new System.Windows.Forms.GroupBox();
+            this.minusPowerGrindButton = new System.Windows.Forms.Button();
+            this.plusPowerGrindButton = new System.Windows.Forms.Button();
+            this.recursionGroupBox = new System.Windows.Forms.GroupBox();
+            this.grindPowerTextBox = new System.Windows.Forms.TextBox();
+            this.minusRecursionGrindButton = new System.Windows.Forms.Button();
+            this.plusRecursionGrindButton = new System.Windows.Forms.Button();
+            this.grindRecursionTextBox = new System.Windows.Forms.TextBox();
             this.grindGroupBox.SuspendLayout();
+            this.powerGroupBox.SuspendLayout();
+            this.recursionGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tipsButton
@@ -74,26 +84,15 @@
             this.grindGroupBox.Size = new System.Drawing.Size(196, 257);
             this.grindGroupBox.TabIndex = 2;
             this.grindGroupBox.TabStop = false;
-            this.grindGroupBox.Text = "schijven";
+            this.grindGroupBox.Text = "For loop";
             // 
-            // amountOfGrindsLabel
+            // grindTextBox
             // 
-            this.amountOfGrindsLabel.AutoSize = true;
-            this.amountOfGrindsLabel.Location = new System.Drawing.Point(70, 143);
-            this.amountOfGrindsLabel.Name = "amountOfGrindsLabel";
-            this.amountOfGrindsLabel.Size = new System.Drawing.Size(122, 20);
-            this.amountOfGrindsLabel.TabIndex = 3;
-            this.amountOfGrindsLabel.Text = "Aantal schijven";
-            // 
-            // plusGrindButton
-            // 
-            this.plusGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusGrindButton.Location = new System.Drawing.Point(6, 26);
-            this.plusGrindButton.Name = "plusGrindButton";
-            this.plusGrindButton.Size = new System.Drawing.Size(52, 50);
-            this.plusGrindButton.TabIndex = 3;
-            this.plusGrindButton.Text = "+1";
-            this.plusGrindButton.UseVisualStyleBackColor = true;
+            this.grindTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grindTextBox.Location = new System.Drawing.Point(86, 64);
+            this.grindTextBox.Name = "grindTextBox";
+            this.grindTextBox.Size = new System.Drawing.Size(61, 61);
+            this.grindTextBox.TabIndex = 5;
             // 
             // minusGrindButton
             // 
@@ -105,6 +104,25 @@
             this.minusGrindButton.Text = "-1";
             this.minusGrindButton.UseVisualStyleBackColor = true;
             // 
+            // plusGrindButton
+            // 
+            this.plusGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusGrindButton.Location = new System.Drawing.Point(6, 26);
+            this.plusGrindButton.Name = "plusGrindButton";
+            this.plusGrindButton.Size = new System.Drawing.Size(52, 50);
+            this.plusGrindButton.TabIndex = 3;
+            this.plusGrindButton.Text = "+1";
+            this.plusGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // amountOfGrindsLabel
+            // 
+            this.amountOfGrindsLabel.AutoSize = true;
+            this.amountOfGrindsLabel.Location = new System.Drawing.Point(70, 143);
+            this.amountOfGrindsLabel.Name = "amountOfGrindsLabel";
+            this.amountOfGrindsLabel.Size = new System.Drawing.Size(122, 20);
+            this.amountOfGrindsLabel.TabIndex = 3;
+            this.amountOfGrindsLabel.Text = "Aantal schijven";
+            // 
             // playsButton
             // 
             this.playsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,14 +133,6 @@
             this.playsButton.Text = "aantal zetten";
             this.playsButton.UseVisualStyleBackColor = true;
             this.playsButton.Click += new System.EventHandler(this.playsButton_Click);
-            // 
-            // grindTextBox
-            // 
-            this.grindTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grindTextBox.Location = new System.Drawing.Point(86, 64);
-            this.grindTextBox.Name = "grindTextBox";
-            this.grindTextBox.Size = new System.Drawing.Size(61, 61);
-            this.grindTextBox.TabIndex = 5;
             // 
             // timeLabel
             // 
@@ -138,17 +148,100 @@
             // 
             this.resultLabel.AutoSize = true;
             this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultLabel.Location = new System.Drawing.Point(359, 377);
+            this.resultLabel.Location = new System.Drawing.Point(648, 342);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(93, 32);
             this.resultLabel.TabIndex = 5;
             this.resultLabel.Text = "label1";
+            // 
+            // powerGroupBox
+            // 
+            this.powerGroupBox.Controls.Add(this.grindPowerTextBox);
+            this.powerGroupBox.Controls.Add(this.minusPowerGrindButton);
+            this.powerGroupBox.Controls.Add(this.plusPowerGrindButton);
+            this.powerGroupBox.Location = new System.Drawing.Point(214, 181);
+            this.powerGroupBox.Name = "powerGroupBox";
+            this.powerGroupBox.Size = new System.Drawing.Size(200, 257);
+            this.powerGroupBox.TabIndex = 6;
+            this.powerGroupBox.TabStop = false;
+            this.powerGroupBox.Text = "Machtsverheffende";
+            // 
+            // minusPowerGrindButton
+            // 
+            this.minusPowerGrindButton.AutoSize = true;
+            this.minusPowerGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusPowerGrindButton.Location = new System.Drawing.Point(6, 113);
+            this.minusPowerGrindButton.Name = "minusPowerGrindButton";
+            this.minusPowerGrindButton.Size = new System.Drawing.Size(51, 50);
+            this.minusPowerGrindButton.TabIndex = 1;
+            this.minusPowerGrindButton.Text = "-1";
+            this.minusPowerGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // plusPowerGrindButton
+            // 
+            this.plusPowerGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusPowerGrindButton.Location = new System.Drawing.Point(6, 26);
+            this.plusPowerGrindButton.Name = "plusPowerGrindButton";
+            this.plusPowerGrindButton.Size = new System.Drawing.Size(51, 50);
+            this.plusPowerGrindButton.TabIndex = 0;
+            this.plusPowerGrindButton.Text = "+1";
+            this.plusPowerGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // recursionGroupBox
+            // 
+            this.recursionGroupBox.Controls.Add(this.grindRecursionTextBox);
+            this.recursionGroupBox.Controls.Add(this.minusRecursionGrindButton);
+            this.recursionGroupBox.Controls.Add(this.plusRecursionGrindButton);
+            this.recursionGroupBox.Location = new System.Drawing.Point(442, 181);
+            this.recursionGroupBox.Name = "recursionGroupBox";
+            this.recursionGroupBox.Size = new System.Drawing.Size(200, 257);
+            this.recursionGroupBox.TabIndex = 7;
+            this.recursionGroupBox.TabStop = false;
+            this.recursionGroupBox.Text = "Recursie";
+            // 
+            // grindPowerTextBox
+            // 
+            this.grindPowerTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grindPowerTextBox.Location = new System.Drawing.Point(63, 64);
+            this.grindPowerTextBox.Name = "grindPowerTextBox";
+            this.grindPowerTextBox.Size = new System.Drawing.Size(61, 61);
+            this.grindPowerTextBox.TabIndex = 6;
+            // 
+            // minusRecursionGrindButton
+            // 
+            this.minusRecursionGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusRecursionGrindButton.Location = new System.Drawing.Point(6, 113);
+            this.minusRecursionGrindButton.Name = "minusRecursionGrindButton";
+            this.minusRecursionGrindButton.Size = new System.Drawing.Size(52, 50);
+            this.minusRecursionGrindButton.TabIndex = 6;
+            this.minusRecursionGrindButton.Text = "-1";
+            this.minusRecursionGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // plusRecursionGrindButton
+            // 
+            this.plusRecursionGrindButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusRecursionGrindButton.Location = new System.Drawing.Point(6, 26);
+            this.plusRecursionGrindButton.Name = "plusRecursionGrindButton";
+            this.plusRecursionGrindButton.Size = new System.Drawing.Size(52, 50);
+            this.plusRecursionGrindButton.TabIndex = 7;
+            this.plusRecursionGrindButton.Text = "+1";
+            this.plusRecursionGrindButton.UseVisualStyleBackColor = true;
+            // 
+            // grindRecursionTextBox
+            // 
+            this.grindRecursionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grindRecursionTextBox.Location = new System.Drawing.Point(64, 64);
+            this.grindRecursionTextBox.Name = "grindRecursionTextBox";
+            this.grindRecursionTextBox.Size = new System.Drawing.Size(61, 61);
+            this.grindRecursionTextBox.TabIndex = 7;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.recursionGroupBox);
+            this.Controls.Add(this.powerGroupBox);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.playsButton);
@@ -160,6 +253,10 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.grindGroupBox.ResumeLayout(false);
             this.grindGroupBox.PerformLayout();
+            this.powerGroupBox.ResumeLayout(false);
+            this.powerGroupBox.PerformLayout();
+            this.recursionGroupBox.ResumeLayout(false);
+            this.recursionGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +274,14 @@
         private System.Windows.Forms.TextBox grindTextBox;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.GroupBox powerGroupBox;
+        private System.Windows.Forms.Button minusPowerGrindButton;
+        private System.Windows.Forms.Button plusPowerGrindButton;
+        private System.Windows.Forms.GroupBox recursionGroupBox;
+        private System.Windows.Forms.TextBox grindPowerTextBox;
+        private System.Windows.Forms.TextBox grindRecursionTextBox;
+        private System.Windows.Forms.Button minusRecursionGrindButton;
+        private System.Windows.Forms.Button plusRecursionGrindButton;
     }
 }
 
