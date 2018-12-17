@@ -39,7 +39,7 @@ namespace Torens_van_Hanoi
             ulong numberInt = 2;
             ulong resultInt = 1;
 
-            for (ulong i = 0; i < powerInt;i++)
+            for (ulong i = 0; i < powerInt; i++)
             {
                 resultInt *= numberInt;
             }
@@ -48,9 +48,6 @@ namespace Torens_van_Hanoi
             MessageBox.Show(resultInt.ToString());
             resultLabel.Text = resultInt.ToString();
 
-            TimeSpan time = TimeSpan.FromSeconds(1);
-
-            string str = time.ToString(@"hh\:mm\:ss\:fff");
 
         }
 
@@ -91,6 +88,11 @@ namespace Torens_van_Hanoi
         {
             a--;
             grindPowerTextBox.Text = a.ToString();
+        }
+
+        private void grindRecursionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tipsButton = new System.Windows.Forms.Button();
-            this.rulesButton = new System.Windows.Forms.Button();
             this.grindGroupBox = new System.Windows.Forms.GroupBox();
             this.grindTextBox = new System.Windows.Forms.TextBox();
             this.minusGrindButton = new System.Windows.Forms.Button();
@@ -54,27 +52,6 @@
             this.powerGroupBox.SuspendLayout();
             this.recursionGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tipsButton
-            // 
-            this.tipsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipsButton.Location = new System.Drawing.Point(12, 12);
-            this.tipsButton.Name = "tipsButton";
-            this.tipsButton.Size = new System.Drawing.Size(129, 54);
-            this.tipsButton.TabIndex = 0;
-            this.tipsButton.Text = "Tips";
-            this.tipsButton.UseVisualStyleBackColor = true;
-            // 
-            // rulesButton
-            // 
-            this.rulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rulesButton.Location = new System.Drawing.Point(832, 12);
-            this.rulesButton.Name = "rulesButton";
-            this.rulesButton.Size = new System.Drawing.Size(134, 54);
-            this.rulesButton.TabIndex = 1;
-            this.rulesButton.Text = "Rules";
-            this.rulesButton.UseVisualStyleBackColor = true;
-            this.rulesButton.Click += new System.EventHandler(this.rulesButton_Click);
             // 
             // grindGroupBox
             // 
@@ -146,7 +123,7 @@
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(41, 132);
+            this.timeLabel.Location = new System.Drawing.Point(18, 142);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(95, 36);
             this.timeLabel.TabIndex = 4;
@@ -248,6 +225,7 @@
             this.grindRecursionTextBox.Name = "grindRecursionTextBox";
             this.grindRecursionTextBox.Size = new System.Drawing.Size(61, 61);
             this.grindRecursionTextBox.TabIndex = 7;
+            this.grindRecursionTextBox.TextChanged += new System.EventHandler(this.grindRecursionTextBox_TextChanged);
             // 
             // button1
             // 
@@ -299,8 +277,6 @@
             this.Controls.Add(this.powerGroupBox);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.grindGroupBox);
-            this.Controls.Add(this.rulesButton);
-            this.Controls.Add(this.tipsButton);
             this.Name = "MainForm";
             this.Text = "Torens van Hanoi zettenberekening";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -316,9 +292,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button tipsButton;
-        private System.Windows.Forms.Button rulesButton;
         private System.Windows.Forms.GroupBox grindGroupBox;
         private System.Windows.Forms.Button minusGrindButton;
         private System.Windows.Forms.Button plusGrindButton;
