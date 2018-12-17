@@ -68,7 +68,7 @@
             // rulesButton
             // 
             this.rulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rulesButton.Location = new System.Drawing.Point(654, 12);
+            this.rulesButton.Location = new System.Drawing.Point(832, 12);
             this.rulesButton.Name = "rulesButton";
             this.rulesButton.Size = new System.Drawing.Size(134, 54);
             this.rulesButton.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.grindGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grindGroupBox.Location = new System.Drawing.Point(12, 181);
             this.grindGroupBox.Name = "grindGroupBox";
-            this.grindGroupBox.Size = new System.Drawing.Size(196, 257);
+            this.grindGroupBox.Size = new System.Drawing.Size(483, 257);
             this.grindGroupBox.TabIndex = 2;
             this.grindGroupBox.TabStop = false;
             this.grindGroupBox.Text = "For loop";
@@ -148,9 +148,9 @@
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.Location = new System.Drawing.Point(41, 132);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(133, 36);
+            this.timeLabel.Size = new System.Drawing.Size(95, 36);
             this.timeLabel.TabIndex = 4;
-            this.timeLabel.Text = "00:00:00";
+            this.timeLabel.Text = "label1";
             // 
             // resultLabel
             // 
@@ -169,9 +169,9 @@
             this.powerGroupBox.Controls.Add(this.grindPowerTextBox);
             this.powerGroupBox.Controls.Add(this.minusPowerGrindButton);
             this.powerGroupBox.Controls.Add(this.plusPowerGrindButton);
-            this.powerGroupBox.Location = new System.Drawing.Point(214, 181);
+            this.powerGroupBox.Location = new System.Drawing.Point(501, 181);
             this.powerGroupBox.Name = "powerGroupBox";
-            this.powerGroupBox.Size = new System.Drawing.Size(200, 257);
+            this.powerGroupBox.Size = new System.Drawing.Size(250, 257);
             this.powerGroupBox.TabIndex = 6;
             this.powerGroupBox.TabStop = false;
             this.powerGroupBox.Text = "Machtsverheffende";
@@ -206,9 +206,9 @@
             this.recursionGroupBox.Controls.Add(this.grindRecursionTextBox);
             this.recursionGroupBox.Controls.Add(this.minusRecursionGrindButton);
             this.recursionGroupBox.Controls.Add(this.plusRecursionGrindButton);
-            this.recursionGroupBox.Location = new System.Drawing.Point(442, 181);
+            this.recursionGroupBox.Location = new System.Drawing.Point(751, 181);
             this.recursionGroupBox.Name = "recursionGroupBox";
-            this.recursionGroupBox.Size = new System.Drawing.Size(200, 257);
+            this.recursionGroupBox.Size = new System.Drawing.Size(215, 257);
             this.recursionGroupBox.TabIndex = 7;
             this.recursionGroupBox.TabStop = false;
             this.recursionGroupBox.Text = "Recursie";
@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(978, 450);
             this.Controls.Add(this.recursionGroupBox);
             this.Controls.Add(this.powerGroupBox);
             this.Controls.Add(this.timeLabel);

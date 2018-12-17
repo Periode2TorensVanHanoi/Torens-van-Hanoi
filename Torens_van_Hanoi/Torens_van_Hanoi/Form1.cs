@@ -35,18 +35,22 @@ namespace Torens_van_Hanoi
 
         private void playsButton_Click(object sender, EventArgs e)
         {
-            int powerInt = int.Parse(grindTextBox.Text);
-            int numberInt = 2;
-            int resultInt = 1;
+            ulong powerInt = ulong.Parse(grindTextBox.Text);
+            ulong numberInt = 2;
+            ulong resultInt = 1;
 
-            for (int i = 0; i < powerInt;i++)
+            for (ulong i = 0; i < powerInt;i++)
             {
                 resultInt *= numberInt;
             }
 
             resultInt--;
-
+            MessageBox.Show(resultInt.ToString());
             resultLabel.Text = resultInt.ToString();
+
+            TimeSpan time = TimeSpan.FromSeconds(1);
+
+            string str = time.ToString(@"hh\:mm\:ss\:fff");
 
         }
 
@@ -73,7 +77,7 @@ namespace Torens_van_Hanoi
 
             result = (long)Math.Pow(2, number) - 1;
 
-
+            MessageBox.Show(result.ToString());
             powerLabel.Text = result.ToString();
         }
 
