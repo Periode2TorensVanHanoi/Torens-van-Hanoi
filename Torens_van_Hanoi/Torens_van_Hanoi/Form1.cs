@@ -67,12 +67,12 @@ namespace Torens_van_Hanoi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double number;
-            long result = 0;
-            number = double.Parse(grindPowerTextBox.Text);
+            ulong number;
+            ulong result = 0;
+            number = ulong.Parse(grindPowerTextBox.Text);
 
 
-            result = (long)Math.Pow(2, number) - 1;
+            result = (ulong)Math.Pow(2, number) - 1;
 
             MessageBox.Show(result.ToString());
             powerLabel.Text = result.ToString();
